@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 
-import {selectValue} from '../actions';
-import List from '../components/List';
+import {selectValue} from 'actions';
+import List from 'components/List';
 
 function mapStateToProps(state){
   return {

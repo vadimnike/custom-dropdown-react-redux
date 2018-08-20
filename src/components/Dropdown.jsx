@@ -49,7 +49,8 @@ class Dropdown extends Component{
                  readOnly="true"
                  disabled
           />
-          <i className="toggle--dropdown ic ic-drop-arrow" onClick={this.toggleIsOpened}></i>
+          <i className="toggle--dropdown ic ic-drop-arrow"
+             onClick={this.toggleIsOpened}></i>
         </div>
         <ul className="dropdown--list">
           {

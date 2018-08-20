@@ -1,6 +1,5 @@
 For handling project was used gulp task manager that includes next tasks:
 
-
     scss - compile styles to css file
 
     css:minify - minifying css file
@@ -10,7 +9,6 @@ For handling project was used gulp task manager that includes next tasks:
     watcher - watching for changes in scss  folders
 
     build - running  and css:minify
-
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

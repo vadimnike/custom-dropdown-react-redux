@@ -1,0 +1,16 @@
+{
+  "selects":[
+    {
+      "id": "select-1",
+      "selectedCountryId": 0,
+      "title": "",
+      "isOpened": false
+    },
+    {
+      "id": "select-2",
+      "selectedCountryId": 0,
+      "title": "",
+      "isOpened": false
+    }
+  ]
+}

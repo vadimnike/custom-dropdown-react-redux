@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "iconFont";
+  src: url('../fonts/icon-font/iconFont.eot');
+  src: url('../fonts/icon-font/iconFont.eot?#iefix') format('eot'),
+  url('../fonts/icon-font/iconFont.woff2') format('woff2'),
+  url('../fonts/icon-font/iconFont.woff') format('woff'),
+  url('../fonts/icon-font/iconFont.ttf') format('truetype'),
+  url('../fonts/icon-font/iconFont.svg#iconFont') format('svg');
+}
+
+@mixin ic-styles {
+  font-family: "iconFont";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  // speak: none; // only necessary if not using the private unicode range (firstGlyph option) sfdfgasdfasdf
+  text-decoration: none;
+  text-transform: none;
+}
+
+%ic {
+  @include ic-styles;
+}
+
+
+@function ic-char($filename) {
+  $char: "";
+
+  @if $filename == drop-arrow {
+  $char: "\E001";
+}
+
+
+@return $char;
+}
+
+@mixin ic($filename, $insert: before, $extend: true) {
+&:#{$insert} {
+  @if $extend {
+    @extend %ic;
+  } @else {
+    @include ic-styles;
+  }
+  content: ic-char($filename);
+}
+}
+
+.ic-drop-arrow {
+  @include ic(drop-arrow);
+}
